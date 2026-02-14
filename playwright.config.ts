@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test'
 
 /**
  * Read environment variables from file.
@@ -43,13 +43,13 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'aDS',
-      testMatch: 'aDS.spec.ts',
-      retries: 1,
+      name: 'Demo QA',
+      testMatch: 'UI_DemoQA.spec.ts',
+      retries: 2,
       use: {
         browserName: 'chromium',
-        //viewport: {width: 1280, height: 800},
-        viewport: { width: 1920, height: 1080 },
+        viewport: { width: 1900, height: 1060 },
+        //viewport: { width: 1920, height: 1080 },
         headless: false
       }
     },
