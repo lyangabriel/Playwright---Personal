@@ -17,7 +17,12 @@ export class Elements extends BasePage {
     }
 
     async elementsTextBox() {
+        const data = Data.Elements
         await this.clickMenuItem('Text Box')
+        await this.populateTextbox('userName', data.fullName)
+        await this.populateTextbox('userEmail', data.email)
+        await this.populateTextarea('currentAddress', data.currentAddress)
+        await this.populateTextarea('permanentAddress', data.permanentAddress)
     }
 
     async elementsCheckBox() {
@@ -51,5 +56,9 @@ export class Elements extends BasePage {
     async elementsDynamicProperties() {
         await this.clickMenuItem('Dynamic Properties')
     }
+
+
+
+
 
 }

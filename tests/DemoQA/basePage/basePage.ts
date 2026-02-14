@@ -28,7 +28,22 @@ export class BasePage {
 
     async clickMenuItem(menuName: string) {
         const locator = this.page.locator('.menu-list li span.text').getByText(menuName, { exact: true })
+        await this.waitForNumberOfSeconds(0.5)
         await locator.click()
+    }
+
+    async populateTextbox(id: string, value: string) {
+        const locator = this.page.locator(`input#${id}`)
+        await locator.clear()
+        await this.waitForNumberOfSeconds(0.5)
+        await locator.fill(value)
+    }
+
+    async populateTextarea(id: string, value: string) {
+        const locator = this.page.locator(`textarea#${id}`)
+        await locator.clear()
+        await this.waitForNumberOfSeconds(0.5)
+        await locator.fill(value)
     }
     
 }

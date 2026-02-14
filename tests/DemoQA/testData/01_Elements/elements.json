@@ -1,6 +1,10 @@
 {
     "Elements": {
         "cardBody": "Elements",
-        "groupHeader": "Elements"
+        "groupHeader": "Elements",
+        "fullName":"Full Name",
+        "email":"TestMail@email.com",
+        "currentAddress":"Test Current Address",
+        "permanentAddress":"Test Permanent Address"
     }
 }
